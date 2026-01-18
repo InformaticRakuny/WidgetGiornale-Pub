@@ -12,15 +12,24 @@ body {
     height: 100vh;
 }
 
+:root {
+    --centro-x: 50%; /* Imposta inizialmente il centro a metà */
+    --centro-y: 50%; /* Imposta inizialmente il centro a metà */
+}
+
 .giornali-container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;  /* Aumenta la distanza tra i giornali */
-    perspective: 1500px;  /* Maggiore profondità dell'effetto 3D */
-    position: relative;
-    width: 400px;  /* Finestra più grande */
-    height: 400px; /* Finestra più alta */
+    
+    /* Usa le variabili CSS per definire il centro dinamico */
+    top: var(--centro-y);  
+    left: var(--centro-x);   
+    transform: translate(-50%, -50%);
 }
 
 .giornale {
