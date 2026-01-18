@@ -27,13 +27,14 @@ body {
     width: 120px;
     height: 150px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     transform-origin: center;
     transition: transform 0.5s ease;
     cursor: pointer;
     opacity: 0.9;
     border-radius: 10px;
+    transform: translate(-50%, -50%); /* Allinea il centro del giornale */
 }
 
 .giornale img {
@@ -43,20 +44,24 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Giornale 1 */
 .giornale:nth-child(1) {
-    transform: rotate(-15deg) translateX(-50px) translateY(20px);
+    transform: translate(-50%, -50%) rotate(-15deg) translateX(-120px) translateY(-100px);
 }
 
+/* Giornale 2 */
 .giornale:nth-child(2) {
-    transform: rotate(10deg) translateX(40px) translateY(-30px);
+    transform: translate(-50%, -50%) rotate(10deg) translateX(60px) translateY(-50px);
 }
 
+/* Giornale 3 */
 .giornale:nth-child(3) {
-    transform: rotate(-5deg) translateX(70px) translateY(50px);
+    transform: translate(-50%, -50%) rotate(-5deg) translateX(100px) translateY(40px);
 }
 
+/* Giornale 4 */
 .giornale:nth-child(4) {
-    transform: rotate(20deg) translateX(-40px) translateY(-10px);
+    transform: translate(-50%, -50%) rotate(20deg) translateX(-70px) translateY(80px);
 }
 
 /* Effetto quando si passa sopra */
