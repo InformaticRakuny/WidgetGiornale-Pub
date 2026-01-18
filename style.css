@@ -14,14 +14,15 @@ body {
 
 .giornali-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;  /* Aumenta la distanza tra i giornali */
-    perspective: 1500px;  /* Maggiore profondità dell'effetto 3D */
+    justify-content: center;  /* Centra orizzontalmente */
+    align-items: center;      /* Centra verticalmente */
+    gap: 10px;                /* Spazio tra i giornali */
+    perspective: 1000px;      /* Per effetto 3D */
     position: relative;
-    width: 400px;  /* Finestra più grande */
-    height: 400px; /* Finestra più alta */
+    width: 400px;             /* Imposta la larghezza della finestra */
+    height: 400px;            /* Imposta l'altezza della finestra */
 }
+
 
 .giornale {
     width: 80px;             /* Ridotto rispetto a prima */
