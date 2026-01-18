@@ -1,11 +1,19 @@
 // Selezioniamo tutti gli elementi .giornale
 const giornali = document.querySelectorAll('.giornale');
 
-// Funzione per generare una posizione casuale per ogni giornale
+// Funzione per generare una posizione casuale per ogni giornale dentro i limiti del contenitore
 function getRandomPosition() {
-    const randomX = (Math.random() - 0.5) * 200; // Posizione casuale X
-    const randomY = (Math.random() - 0.5) * 200; // Posizione casuale Y
-    const randomRotate = (Math.random() - 0.5) * 60; // Angolo casuale di rotazione
+    // Impostiamo le dimensioni del contenitore
+    const containerWidth = 400;  // Larghezza del contenitore
+    const containerHeight = 400; // Altezza del contenitore
+
+    // Generiamo una posizione casuale X e Y limitata all'interno dei bordi del contenitore
+    const randomX = (Math.random() - 0.5) * (containerWidth - 100);  // Limita la posizione X
+    const randomY = (Math.random() - 0.5) * (containerHeight - 130); // Limita la posizione Y
+
+    // Genera una rotazione casuale tra -30 e +30 gradi
+    const randomRotate = (Math.random() - 0.5) * 60;
+
     return `rotate(${randomRotate}deg) translateX(${randomX}px) translateY(${randomY}px)`;
 }
 
@@ -27,9 +35,9 @@ giornali.forEach((giornale, index) => {
 
     // Quando il mouse esce dalla pila
     giornale.addEventListener('mouseout', () => {
-        // I giornali tornano in una posizione casuale
+        // I giornali tornano in una posizione casuale, ma dentro i limiti
         giornali.forEach((g) => {
-            g.style.transform = getRandomPosition();  // Posizione casuale
+            g.style.transform = getRandomPosition();  // Posizione casuale dentro i limiti
         });
     });
 });
