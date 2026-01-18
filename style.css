@@ -16,9 +16,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    perspective: 1000px; /* Per dare l'effetto 3D */
+    gap: 20px;  /* Aumenta la distanza tra i giornali */
+    perspective: 1500px;  /* Maggiore profondità dell'effetto 3D */
     position: relative;
+    width: 800px;  /* Finestra più grande */
+    height: 600px; /* Finestra più alta */
 }
 
 .giornale {
