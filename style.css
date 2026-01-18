@@ -19,13 +19,13 @@ body {
     gap: 20px;  /* Aumenta la distanza tra i giornali */
     perspective: 1500px;  /* Maggiore profondità dell'effetto 3D */
     position: relative;
-    width: 800px;  /* Finestra più grande */
+    width: 400px;  /* Finestra più grande */
     height: 400px; /* Finestra più alta */
 }
 
 .giornale {
-    width: 120px;
-    height: 150px;
+    width: 80px;
+    height: 100px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -46,24 +46,23 @@ body {
 
 /* Giornale 1 */
 .giornale:nth-child(1) {
-    transform: translate(-50%, -50%) rotate(-15deg) translateX(-120px) translateY(-100px);
+    transform: translate(-50%, -50%) rotate(-15deg) translateX(-60px) translateY(-80px);
 }
 
 /* Giornale 2 */
 .giornale:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(10deg) translateX(60px) translateY(-50px);
+    transform: translate(-50%, -50%) rotate(10deg) translateX(40px) translateY(-40px);
 }
 
 /* Giornale 3 */
 .giornale:nth-child(3) {
-    transform: translate(-50%, -50%) rotate(-5deg) translateX(100px) translateY(40px);
+    transform: translate(-50%, -50%) rotate(-5deg) translateX(70px) translateY(50px);
 }
 
 /* Giornale 4 */
 .giornale:nth-child(4) {
-    transform: translate(-50%, -50%) rotate(20deg) translateX(-70px) translateY(80px);
+    transform: translate(-50%, -50%) rotate(20deg) translateX(-30px) translateY(70px);
 }
-
 /* Effetto quando si passa sopra */
 .giornali-container:hover .giornale {
     transform: rotateY(30deg);
