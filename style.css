@@ -16,12 +16,13 @@ body {
     display: flex;
     justify-content: center;  /* Centra orizzontalmente */
     align-items: center;      /* Centra verticalmente */
-    gap: 10px;                /* Spazio tra i giornali */
-    perspective: 1000px;      /* Per effetto 3D */
+    gap: 20px;                /* Aggiunge spazio tra i giornali */
+    perspective: 1000px;      /* Mantiene l'effetto 3D */
     position: relative;
-    width: 400px;             /* Imposta la larghezza della finestra */
-    height: 400px;            /* Imposta l'altezza della finestra */
+    width: 800px;             /* Imposta la larghezza del contenitore */
+    height: 400px;            /* Imposta l'altezza del contenitore */
 }
+
 
 
 .giornale {
