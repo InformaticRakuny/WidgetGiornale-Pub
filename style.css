@@ -10,6 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
 .giornali-container {
@@ -19,15 +20,15 @@ body {
     gap: 10px;
     perspective: 1000px;
     position: relative;
-    width: 400px;  /* Larghezza del contenitore */
-    height: 400px; /* Altezza del contenitore */
-    overflow: hidden;  /* Assicurati che nulla fuoriesca */
-    background-color: #fff;  /* Fondo bianco per evidenziare i giornali */
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    background-color: #fff;
 }
 
 .giornale {
-    width: 100px;   /* Larghezza del giornale */
-    height: 130px;  /* Altezza del giornale */
+    width: 100px;
+    height: 130px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,10 +37,10 @@ body {
     cursor: pointer;
     opacity: 0.9;
     border-radius: 10px;
-    transform: translate(-50%, -50%); /* Centrato nel contenitore */
+    transform: translate(-50%, -50%); /* Centrare il giornale nel contenitore */
 }
 
-/* Posizioni iniziali centrali */
+/* Posizione iniziale dei giornali */
 .giornale:nth-child(1) {
     transform: translate(-50%, -50%) rotate(-15deg) translateX(-60px) translateY(-80px);
 }
@@ -56,7 +57,7 @@ body {
     transform: translate(-50%, -50%) rotate(20deg) translateX(-30px) translateY(70px);
 }
 
-/* Hover - Muove i giornali a ventaglio */
+/* Effetto Hover - Ventaglio */
 .giornali-container:hover .giornale {
     transform: rotateY(30deg) scale(1.1);
 }
