@@ -25,11 +25,11 @@ body {
 
 
 .giornale {
-    width: 100px;             /* Aumentato da 80px a 100px */
-    height: 130px;            /* Aumentato da 100px a 130px */
+    width: 80px;             /* Ridotto rispetto a prima */
+    height: 100px;           /* Ridotto rispetto a prima */
     position: absolute;
-    top: 50%;                 /* Centra verticalmente */
-    left: 50%;                /* Centra orizzontalmente */
+    top: 50%;                /* Centra verticalmente */
+    left: 50%;               /* Centra orizzontalmente */
     transform-origin: center;
     transition: transform 0.5s ease;
     cursor: pointer;
@@ -57,6 +57,7 @@ body {
 .giornale:nth-child(4) {
     transform: translate(-50%, -50%) rotate(20deg) translateX(-30px) translateY(70px);
 }
+
 
 
 /* Effetto quando si passa sopra */
