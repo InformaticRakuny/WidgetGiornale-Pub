@@ -1,67 +1,33 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-}
-
-.giornali-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    perspective: 1000px;
-    position: relative;
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
-    background-color: #fff;
-}
-
 .giornale {
-    width: 100px;
-    height: 130px;
+    width: 120px;
+    height: 150px;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50%;              /* Centra verticalmente il giornale */
+    left: 50%;             /* Centra orizzontalmente il giornale */
     transform-origin: center;
     transition: transform 0.5s ease;
     cursor: pointer;
     opacity: 0.9;
     border-radius: 10px;
-    transform: translate(-50%, -50%); /* Centrare il giornale nel contenitore */
+    transform: translate(-50%, -50%); /* Allinea il centro del giornale */
 }
 
-/* Posizione iniziale dei giornali */
+/* Giornale 1 */
 .giornale:nth-child(1) {
-    transform: translate(-50%, -50%) rotate(-15deg) translateX(-60px) translateY(-80px);
+    transform: translate(-50%, -50%) rotate(-15deg) translateX(-120px) translateY(-100px);
 }
 
+/* Giornale 2 */
 .giornale:nth-child(2) {
-    transform: translate(-50%, -50%) rotate(10deg) translateX(40px) translateY(-40px);
+    transform: translate(-50%, -50%) rotate(10deg) translateX(60px) translateY(-50px);
 }
 
+/* Giornale 3 */
 .giornale:nth-child(3) {
-    transform: translate(-50%, -50%) rotate(-5deg) translateX(70px) translateY(50px);
+    transform: translate(-50%, -50%) rotate(-5deg) translateX(100px) translateY(40px);
 }
 
+/* Giornale 4 */
 .giornale:nth-child(4) {
-    transform: translate(-50%, -50%) rotate(20deg) translateX(-30px) translateY(70px);
-}
-
-/* Effetto Hover - Ventaglio */
-.giornali-container:hover .giornale {
-    transform: rotateY(30deg) scale(1.1);
-}
-
-.giornale:hover {
-    transform: rotateY(0deg) scale(1.1);
+    transform: translate(-50%, -50%) rotate(20deg) translateX(-70px) translateY(80px);
 }
