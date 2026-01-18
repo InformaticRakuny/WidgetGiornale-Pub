@@ -12,24 +12,16 @@ body {
     height: 100vh;
 }
 
-:root {
-    --centro-x: 50%; /* Imposta inizialmente il centro a metà */
-    --centro-y: 50%; /* Imposta inizialmente il centro a metà */
-}
-
 .giornali-container {
-    width: 400px;
-    height: 400px;
-    position: relative;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* Usa le variabili CSS per definire il centro dinamico */
-    top: var(--centro-y);  
-    left: var(--centro-x);   
-    transform: translate(-50%, -50%);
+    gap: 10px;
+    perspective: 1000px;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
 }
 
 .giornale {
@@ -43,38 +35,29 @@ body {
     cursor: pointer;
     opacity: 0.9;
     border-radius: 10px;
-    transform: translate(-50%, -50%); /* Allinea il centro del giornale */
+    transform: translate(-50%, -50%);
 }
 
-.giornale img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Giornale 1 */
+/* Posizioni iniziali centrali, a ventaglio */
 .giornale:nth-child(1) {
     transform: translate(-50%, -50%) rotate(-15deg) translateX(-60px) translateY(-80px);
 }
 
-/* Giornale 2 */
 .giornale:nth-child(2) {
     transform: translate(-50%, -50%) rotate(10deg) translateX(40px) translateY(-40px);
 }
 
-/* Giornale 3 */
 .giornale:nth-child(3) {
     transform: translate(-50%, -50%) rotate(-5deg) translateX(70px) translateY(50px);
 }
 
-/* Giornale 4 */
 .giornale:nth-child(4) {
     transform: translate(-50%, -50%) rotate(20deg) translateX(-30px) translateY(70px);
 }
-/* Effetto quando si passa sopra */
+
+/* Hover - Muove i giornali a ventaglio */
 .giornali-container:hover .giornale {
-    transform: rotateY(30deg);
+    transform: rotateY(30deg) scale(1.1);
 }
 
 .giornale:hover {
