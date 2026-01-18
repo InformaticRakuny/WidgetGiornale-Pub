@@ -1,15 +1,21 @@
 // Selezioniamo tutti gli elementi .giornale
 const giornali = document.querySelectorAll('.giornale');
 
-// Funzione per generare una posizione casuale per ogni giornale dentro i limiti del contenitore
+// Funzione per generare una posizione casuale per ogni giornale all'interno del contenitore
 function getRandomPosition() {
-    // Impostiamo le dimensioni del contenitore
     const containerWidth = 400;  // Larghezza del contenitore
     const containerHeight = 400; // Altezza del contenitore
 
-    // Generiamo una posizione casuale X e Y limitata all'interno dei bordi del contenitore
-    const randomX = (Math.random() - 0.5) * (containerWidth - 100);  // Limita la posizione X
-    const randomY = (Math.random() - 0.5) * (containerHeight - 130); // Limita la posizione Y
+    const giornaleWidth = 100;   // Larghezza del giornale
+    const giornaleHeight = 130;  // Altezza del giornale
+
+    // Limiti per le posizioni casuali, considerando le dimensioni del giornale
+    const maxX = containerWidth - giornaleWidth;  // X massima
+    const maxY = containerHeight - giornaleHeight; // Y massima
+
+    // Generiamo una posizione casuale X e Y all'interno dei limiti
+    const randomX = Math.random() * maxX; // Posizione casuale X
+    const randomY = Math.random() * maxY; // Posizione casuale Y
 
     // Genera una rotazione casuale tra -30 e +30 gradi
     const randomRotate = (Math.random() - 0.5) * 60;
