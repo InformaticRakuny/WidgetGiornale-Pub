@@ -1,6 +1,14 @@
 // Selezioniamo tutti gli elementi .giornale
 const giornali = document.querySelectorAll('.giornale');
 
+// Funzione per generare una posizione casuale per ogni giornale
+function getRandomPosition() {
+    const randomX = (Math.random() - 0.5) * 200; // Posizione casuale X
+    const randomY = (Math.random() - 0.5) * 200; // Posizione casuale Y
+    const randomRotate = (Math.random() - 0.5) * 60; // Angolo casuale di rotazione
+    return `rotate(${randomRotate}deg) translateX(${randomX}px) translateY(${randomY}px)`;
+}
+
 // Funzione per gestire l'effetto di spostamento dei giornali
 giornali.forEach((giornale, index) => {
     // Quando il mouse passa sopra il giornale
@@ -19,16 +27,9 @@ giornali.forEach((giornale, index) => {
 
     // Quando il mouse esce dalla pila
     giornale.addEventListener('mouseout', () => {
-        // I giornali restano disordinati, ma non ritornano in posizione ordinata
-        giornali.forEach((g, i) => {
-            // Ogni giornale mantiene una posizione casuale
-            if (i < index) {
-                g.style.transform = 'rotate(-15deg) translateX(-50px) translateY(20px)';
-            } else if (i > index) {
-                g.style.transform = 'rotate(10deg) translateX(40px) translateY(-30px)';
-            } else {
-                g.style.transform = 'rotate(20deg) translateX(-40px) translateY(-10px)';
-            }
+        // I giornali tornano in una posizione casuale
+        giornali.forEach((g) => {
+            g.style.transform = getRandomPosition();  // Posizione casuale
         });
     });
 });
